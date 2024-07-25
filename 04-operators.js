@@ -29,5 +29,15 @@ console.log (a === 7)
 console.log (a === "7")
 
 // Lógicos
-// && and | || or 
+// && and | || or | ! not
+
+// Ternarios
+// Es otra forma de escribir condicionales
+// ... ? ... :
+
+const isRaining = false
+// si se cumple, se ejecuta lo siguiente al signo ?
+// si no se cumple la condición, se va a ejecutar lo seguido a los :
+isRaining ? console.log("está lloviendo"): console.log("no está lloviendo")
+
 
