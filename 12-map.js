@@ -32,3 +32,21 @@ console.log(myMap.get("mail"))
 
 console.log(myMap.has("surname"))
 console.log(myMap.has("age"))
+
+// DELETE
+// para borrar elementos
+
+// CLEAR 
+// elimina todo el map
+
+// KEYS
+// retorna las claves
+
+// VALUES
+// sólo muestra los valores
+
+// SIZE
+// indica tamaño del map
+
+// ENTRIES
+// claves + valores
