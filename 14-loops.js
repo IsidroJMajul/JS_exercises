@@ -32,3 +32,34 @@ do {
     i++
 } while (i < 5)
 
+// FOR OF
+// recorre valores de algo iterable (ej. estructura de datos o algún tipo de dato)
+
+myArray = [1, 2, 3, 4, 5, 6, 7]
+mySet = new Set(["set1", "set2", "set3"])
+myMap = new Map([
+    ["name", "Isidro"],
+    ["mail", "isidro@gmail.com"],
+    ["age", 32]
+])
+
+for (let valor of myArray) {
+    console.log(valor)
+}
+for (let valor of mySet) {
+    console.log(valor)
+}
+for (let valor of myMap) {
+    console.log(valor)
+}
+
+// BREAK y CONTINUE
+
+for (let i = 0; i < 10; i++){
+    if (i == 5) {
+        continue
+    } else if (i == 7){
+        break
+    }
+    console.log(`Hola ${[i]}`)
+}
