@@ -35,7 +35,7 @@ console.log (message)
 // SWITCH
 // Es recomendable para anidar "else if" y cuando se verifica muchas condiciones contra una única variable
 
-let day = 3
+let day = 3 
 let dayName
 
 switch (day) {
