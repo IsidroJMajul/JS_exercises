@@ -60,11 +60,15 @@ let person3 = {
     },
     job: { // añado objeto
         name: "Programador",
-        exp: 7
+        exp: 7,
+        work: function () {
+            // THIS para interpolar una variable definida dentro del mismo objeto
+            console.log(`El ${this.name} trabaja`)
+        }
     } 
 }
 
-console.log(person3)
+person3.job.work()
 
 // Igualdad de objetos
 
@@ -90,3 +94,15 @@ for (let key in person4) {
     // para acceder a los valores, hacerlo a través de []
     console.log(key + ": " + person4[key])
 }
+
+// FUNCIONES COMO OBJETOS
+
+function Person (name, age) { // BUENA PRÁCTICA: debería ser una CLASE
+    this.name = name
+    this.age = age
+}
+
+let person5 = new Person ("Isidro", 32)
+
+console.log(person5)
+console.log(typeof person5)
