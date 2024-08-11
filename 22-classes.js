@@ -5,10 +5,11 @@ https://www.twitch.tv/videos/2218300512?t=00h17m10s
 */
 
 // Clases
+// sirven para hacer plantillas de objetos. las props se asignan a posteriori
 
 class Person {
 
-    constructor(name, age, alias) {
+    constructor(name, age, alias) { //palabra reservada "constructor"
         this.name = name
         this.age = age
         this.alias = alias
@@ -18,7 +19,7 @@ class Person {
 
 // Sintaxis
 
-let person = new Person("Brais", 37, "MoureDev")
+let person = new Person("Brais", 37, "MoureDev") //para instanciarla, en la variable se agrega con "new {class}"
 let person2 = new Person("Brais", 37, "MoureDev")
 
 console.log(person)
@@ -38,6 +39,7 @@ class DefaultPerson {
 
 }
 
+// recordar que se asignan los valores POR ORDEN según el orden del constructor
 let person3 = new DefaultPerson("Brais", 37)
 
 console.log(person3)
@@ -71,16 +73,18 @@ let person4 = new PersonWithMethod("Brais", 37, "MoureDev")
 person4.walk()
 
 // Propiedades privadas
+// para evitar que se modifiquen las propiedades
+// el caracter reservado #{nombre de la prop}
 
 class PrivatePerson {
 
-    #bank
+    #bank //primero, definir al principio de la clase
 
     constructor(name, age, alias, bank) {
         this.name = name
         this.age = age
         this.alias = alias
-        this.#bank = bank
+        this.#bank = bank //luego, declararla
     }
 
     pay() {
@@ -91,13 +95,14 @@ class PrivatePerson {
 
 let person5 = new PrivatePerson("Brais", 37, "MoureDev", "IBAN123456789")
 
-// No podemos acceder
+/* // No podemos acceder
 // console.log(person5.bank) 
-// person5.bank = "new IBAN123456789" // bank no es #bank
+// person5.bank = "new IBAN123456789" // bank no es #bank */
 
 console.log(person5)
 
-// Getters y Setters
+// GETTERS y SETTERS
+// GET: método de sólo lectura - SET: método de sólo edición
 
 class GetSetPerson {
 
@@ -113,11 +118,11 @@ class GetSetPerson {
         this.#bank = bank
     }
 
-    get name() {
+    get name() { // sólo lectura
         return this.#name
     }
 
-    set bank(bank) {
+    set bank(bank) { //sólo edición
         this.#bank = bank
     }
 
