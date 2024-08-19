@@ -134,3 +134,70 @@ console.log(person6)
 console.log(person6.name)
 
 person6.bank = "new IBAN123456789"
+
+/*
+Clase 6 en vídeo | 15/08/2024
+Clases (continuación) y manejo de errores
+https://www.twitch.tv/videos/2225058195?t=00h16m42s
+*/
+
+// Herencia
+// se hereda props y comportamiento de una clase
+
+class Animal {
+
+    constructor(name) {
+        this.name = name
+    }
+
+    sound() {
+        console.log("El animal emite un sonido genérico")
+    }
+
+}
+
+class Dog extends Animal {
+
+    sound() { //sobrescribe a la función "sound" de la clase padre
+        console.log("Guau!")
+    }
+
+    run() {
+        console.log("El perro corre")
+    }
+
+}
+
+class Fish extends Animal {
+
+    constructor(name, size) { //"constructor" exclusivo del local
+        super(name) // "super" llama a la clase padre (en este caso, al parametro "name")
+        this.size = size
+    }
+
+    swim() {
+        console.log("El pez nada")
+    }
+
+}
+
+let myDog = new Dog("MoureDog") //parametro "name" hereda lo mismo que la clase ANIMAL
+myDog.run()
+myDog.sound()
+
+let myFish = new Fish("MoureFish", 10)
+myFish.swim()
+myFish.sound()
+
+// Métodos estáticos
+// no es necesario instanciar la clase para acceder a la clase
+
+class MathOperations {
+
+    static sum(a, b) {
+        return a + b
+    }
+}
+
+// let myClass = new MathOperations() -> no hace falta instanciarla para utilizar la función "sum"
+console.log(MathOperations.sum(5, 10))
