@@ -46,13 +46,55 @@ for (let i = 0; i <= 50; i++){
     }
 }
 
+i = 0
+do {
+    if (i%2 == 0){
+    console.log("do while: " + i)
+    }
+    i++
+} while (i < 21)
+
 // 4. Dado un array de nombres, usa un bucle para imprimir cada nombre en la consola
+
+myNames = ["Isidro", "Majo", "Manuel", "Nicolás"]
+for (i of myNames){
+    console.log(i)
+}
 
 // 5. Escribe un bucle que cuente el número de vocales en una cadena de texto
 
+let myNameVocals = "Isidro";
+let vocals = ["a", "e", "i", "o", "u"];
+let vocalCount = 0;
+
+for (let i of myNameVocals.toLowerCase()) {  // Convertimos a minúsculas para comparación
+    if (vocals.includes(i)) {  // Verificamos si la letra actual es una vocal
+        vocalCount++;  // Incrementamos el contador de vocales
+    }
+}
+
+console.log("Número de vocales:", vocalCount);
+
 // 6. Dado un array de números, usa un bucle para multiplicar todos los números y mostrar el producto
 
+numbersMulti = [1, 2, 3, 4, 5]
+totalMulti = 1
+
+for (let i of numbersMulti) {
+    totalMulti = totalMulti * i
+}
+console.log(totalMulti)
+
+
 // 7. Escribe un bucle que imprima la tabla de multiplicar del 5
+
+i = 1  // Inicializamos i en 1
+do {
+    console.log("5 x " + i + " = " + (5 * i));  // Imprimimos la multiplicación
+    i++;  // Incrementamos i en 1
+}
+while (i <= 10);  // Continuamos el bucle hasta que i sea mayor que 10
+
 
 // 8. Usa un bucle para invertir una cadena de texto
 
